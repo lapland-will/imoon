@@ -1,0 +1,467 @@
+/* This is a custom CSS stylesheet
+These styles do not ship with Bootstrap.
+*/
+* {
+	overflow:hidden;
+}
+
+html {
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+body {
+	height:100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x:hidden;
+	background-color:#f7f7f7;
+	overflow-y:auto;
+}
+
+div {
+	overflow-x:hidden;
+}
+
+#video-section {
+	width:100%;
+	background-color: #15151b;
+	background-repeat: no-repeat;
+	background-position: 47% 50%;
+	background-size: cover;
+	position:relative;
+	height:770px;
+}
+
+#nodvideo {
+	position: absolute;
+	z-index:100;
+	width:100%
+	height:100%;
+	top:0;
+	left:0;
+	background-color: #15151b;
+}
+
+#video-text-holder {
+	position: relative;
+	top:20%;
+	height: 60%;
+	z-index: 1000;
+}
+
+#video-holder {
+	position: absolute;
+	top: 0;
+	height:100%;
+	width:100%;
+	z-index: 1000;
+	display:none;
+	opacity: 1.0;
+}
+
+h1 {
+	text-align: center;
+	font-size: 75px;
+	color: #F7F7F7;
+	font-weight: 100;
+}
+
+h2 {
+	text-align:center;
+	font-size: 40px;
+	color:#666366;
+	font-weight:  100;
+    font-style:   normal;
+    font-stretch: normal;
+    line-height: 50px;
+}
+
+h3 {
+	text-align: center;
+	font-size: 25px;
+	color:#666366;
+	font-weight: 100;
+}
+.btn {
+	border: 2px solid;
+}
+
+.video-button {
+	margin-top: 10%;
+	background-color: transparent;
+	color: white;
+	border-radius: 0;
+}
+
+#navbar {
+	overflow: visible;
+	background-color:rgba(247,247,247,.8);
+	height: 90px;
+	position: absolute;
+	top:100%;
+}
+
+.navbar {
+	background:transparent;
+	border: 0 !important;
+	background-color: transparent;
+	height:auto;
+}
+
+#defaultCountdown
+{
+	position:absolute; top:0; left:0; z-index:500; margin-top: 7px;margin-left:15px;background-color:#15151b;color:#F7F7F7;border:none;
+}
+
+#navbar-alt {
+  	overflow: visible;
+  	height:125px;
+  	margin-top:20px;
+  	position: absolute;
+  	top:100%;
+  	width:100%;
+  	z-index: 1000;
+}
+
+#nav-container {
+	top:0;
+	width:100%;
+	height:100%;
+	padding-top:15px;
+	position:absolute;
+	overflow: visible;
+	margin-top:-10px;
+}
+
+.pull-right {
+	width:75%;
+	font-size: 1em;
+	font-family:helvetica;
+	font-weight: 100;
+	font-style: normal;
+	right:0;
+	text-align: right;
+	padding-right: 7%;
+	padding-top:1%;
+	position:absolute;
+}
+
+.pull-right li {
+	padding-left: 5%;
+	position:relative;
+	float:right;
+	right:0;
+}
+
+.navbar li { color: #000;}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-ms-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.bounce {
+	z-index:500; 
+	text-align:center;
+	width:100%;
+  -webkit-animation: bounce 2s infinite;
+  -moz-animation: bounce 2s infinite;
+  -ms-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+.arrow {
+	position: absolute;
+	bottom:0;
+	left: 0;
+	height: 40px;
+	margin-bottom: 5%;
+	background-image: url(../img/arrow-down.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.preorder-button {
+	margin-top:10%;
+	background-color:transparent;
+	color:#00A6DE;
+	border-radius:0;
+	border-color:#00A6DE;
+}
+
+#logo {
+	margin-left:20%;
+}
+
+.logo2 {
+	height:110%;
+	width:110%;
+}
+
+.standard-section {
+	position: relative;
+	width:100%;
+	height:auto;
+	text-align:center;
+	overflow:hidden;
+	margin-top:10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+                    h1 {  font-size:45px;}
+                    h2 {  font-size:25px;}
+                    h3 {  font-size:12px;}
+                    h4 {  font-size:11px;}
+                    h5 {  font-size:25px;}
+                    h6 {  font-size:12px;}
+                    .h8 { font-size: 14px;}
+
+                    #footer{padding-bottom:25%;}
+                    #navbar{padding-top:10px;}
+					.carousel-row {height:50%;}
+					.carousel-image{max-height: 150px; height:150px; padding-top:5%;}
+					#menubutton{margin-left:700%;}
+					#untouchable{height:600px;}
+					.preorder-section {padding-top:10%;padding-bottom:10%;height:auto; overflow: hidden;}
+	.standard-section { height:auto; overflow: hidden;padding-top:10%;padding-bottom:10%;}
+	#whats-possible {height:auto; overflow: hidden; padding-top:10%; padding-bottom:10%;}
+	#overlaydiv{ width:100%;}
+	#carousel-header{margin-top:0;}
+	#carousel-header h2 {margin-top:0;}
+	#carousel-inner{margin-bottom:20px;}
+	#logo{margin-left:0;height:20px !important; margin-top:-15px !important;}
+	#navbar{height: 10px; overflow:hidden;}
+    #overlaydiv.open{left:0%;}
+    #alt-animation2{display:none;}
+    #landscapebut{display: none;}
+    .static-text-holder{padding-top:0px; margin-top:-10px; top:0;}
+    .preorder-button{margin-top:5px !important;}
+    .footerR{text-align: center;}
+    .footerL{text-align: center;}
+    #alt-animation{padding-top:0; margin-top:0; padding-bottom:3px;}
+  	#carousel-inner2{margin-top:0; padding-top:0;}
+  	#alt-animation .carousel-indicators{bottom:0px; margin-bottom:0px;}
+  	#mailer{margin-top:20px;}
+  	.logo2{height:auto;width:auto;}
+  	#about-us-video{height:350px;}
+  	}
+@media (max-width: 991px) and (min-width: 767px) {
+	html{height:auto;}
+	.preorder-section {padding-top:10%;padding-bottom:10%;height:auto; overflow: hidden;}
+	.standard-section { height:auto; overflow: hidden;padding-top:10%;padding-bottom:10%;}
+	#whats-possible {height:auto; overflow: hidden; padding-top:10%; padding-bottom:10%;}
+	#overlaydiv{ width:100%;}
+	#untouchable{height:800px;}
+	.static-text-holder{margin-top:0%; padding-top:50px;}
+	#carousel-header{margin-top:0;}
+	#carousel-header h2 {margin-top:0;}
+	#carousel-inner{margin-bottom:20px;}
+	 .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #overlaydiv.open{left:0%;}
+    #alt-animation2{display:none;}
+    #landscapebut{display: initial;}
+    #logo{height:50px !important; width:auto;margin-left:0;}
+    #navbar{height:80px;}
+    .logo2{height:auto; width:auto;}
+}
+
+.banner {
+	text-align: center;
+	font-size: 75px;
+	color: #F7F7F7;
+	font-weight: 100;
+}
+
+#location {
+	background-image: url('../img/imoon1.jpg');
+	height: 700px;
+	margin-top: 5%;
+	padding-top:6.5%;
+}
+
+#banner2 {
+	background-image: url('../img/imoon3.jpg');
+	height: 600px;
+	margin-top: 5%;
+}
+
+
+/* Flexible iFrame */
+
+.Flexible-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    margin-top:50px;
+    height: 0;
+    overflow: hidden;
+}
+
+.Flexible-container iframe,   
+.Flexible-container object,  
+.Flexible-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 60%;
+}
+
+footer {
+  margin-top:4%;
+}
+
+#menu {
+  background-image: url('../img/inamo_large.jpg');
+  height: 540px;
+  margin-top: 3%;
+  padding-top:20%;
+  background-repeat: no-repeat;
+}
+
+#menu h2 {
+  color:white;
+  font-size: 3em;
+}
+
+iframe:focus { 
+    outline: none;
+}
+
+/* jumbotron styling */
+  @media screen and (min-width: @screen-sm-min) {
+    padding-top:    (@jumbotron-padding * 1.6);
+    padding-bottom: (@jumbotron-padding * 1.6);
+
+    .container & {
+      padding-left:  (@jumbotron-padding * 1.5);
+      padding-right: (@jumbotron-padding * 1.5);
+    }
+
+    .jumbotron h1,
+    .jumbotron .h1 {
+      font-size: (@font-size-base * 5);
+      text-align: center;
+     padding-top:10%;
+    }
+  }

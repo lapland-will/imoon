@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="World's first Tech Restaurant for food and tech lovers.">
+	<title>iMoon - Tech Restaurant</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/mfp1.css" rel="stylesheet">
+	<script src="js/respond.js"></script>
+
+</head>
+
+<body>
+<!-- javascript -->
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/parse.js"></script>
+	<script src="js/custom.js"></script>
+<!-- Fixed navbar -->
+    <div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation" >
+      <div class="container-fluid" id="nav-container" style="overflow:visible">
+        <div class="navbar-header" style="overflow:visible">
+
+          <a class="navbar-brand" style="overflow:visible;width:100%;height:100%">
+          	<img  style="cursor:pointer;" onclick="goHome()" id="logo" class="img-responsive" src="img/imoonlogo2.png" alt="imoon logo"></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-right">
+            <li><a style="cursor:pointer;margin-top:5px" class="hidden-sm btn navbar-btn" href="#reserve"><b>Reserve Now</b></a></li>
+            <li><a class="hidden-sm" style="cursor:pointer;" href="#menu">Menu</a></li>
+            <li><a  class="hidden-sm" style="cursor:pointer;" href="#banner2">Features</a></li>
+            <li><a  class="hidden-sm" style="cursor:pointer;" href="#location">Location</a></li>
+            <li><a  class="hidden-sm" style="cursor:pointer;" href="#overview">Overview</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    
+			<div id="video-section">
+            <video loop autoplay="autoplay" id="nodvideo" class="video-js hidden-sm hidden-xs" poster="img/ringposter.png">
+                <source src="https://www.hellonod.com/img/Nod_TurntableLoop_Web.mp4" type="video/mp4">
+                <source src="https://www.hellonod.com/img/Nod_TurntableLoop_Web.ogv" type="video/ogg">
+            </video>
+
+            <div class="container-fluid" id="video-text-holder">
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <h1><span class="glyphicon glyphicon-record"></span> iMoon<br/> World's first TechRestaurant</h1>
+                        <button id="link" class="video-button center-block btn btn-default popup-youtube" > Interactive Video </button>
+                        <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+						    <div class="modal-dialog">
+						        <div class="modal-content">
+						            <div class="modal-header">
+						                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						            </div>
+						            <div class="modal-body">
+						                <iframe width="700" height="500" allowfullscreen=""></iframe>
+						            </div>
+						        </div>
+						    </div>
+						</div>
+                    </div>
+                </div>
+            </div>
+            <div class= "arrow animated bounce hidden-xs">
+            </div>
+        </div>
+
+
+        <div class="standard-section" id="overview">
+              <div class="container-fluid static-text-holder" style="text-align:center" id="meet-nod-text-holder">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                        <h2>When Mr.Tech Meets Ms.Food.<br> Just Beautiful.</h2>
+                        <div class="hisrc">
+                        <img src="img/inamotech.jpg"
+                        	data-1x="img/inamo_large.jpg"
+                        	alt="imoon tech restaurant">
+                    	</div>
+                        <h3>Overhead projector beams an interactive surface display down. You can order food and access a webcam to watch it being prepared in the kitchen, and even watch some trending videos while waiting.
+                        </h3>
+                        <!--<img style="max-height:10%; margin-top:2%"src="https://www.hellonod.com/img/arrow-down.png"></img>
+                        <h4> Scroll To See Nod In Action </h4>-->
+                    </div>
+                </div>
+            </div>
+          </div>
+    
+    <div class="container-fluid">      
+	<div id="location">
+		<h2><span class="glyphicon glyphicon-star"></span> At the Center of Boston</h2>
+<!-- Responsive iFrame -->
+	<div class="Flexible-container col-md-9 col-md-offset-2" >
+    <iframe width="425" height="350" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47173.76425445685!2d-71.07884169007745!3d42.356160879112814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdf5abd7b595ee940!2sCambridge+Innovation+Center!5e0!3m2!1sen!2sus!4v1412965922993"></iframe>
+</div>
+		
+	</div>
+	
+	</div>
+
+    <!-- Main jumbotron for intro -->
+    <div class="jumbotron">
+      <div class="container" id="banner2">
+        <h1>Technology + Education + Entertainment</h1>
+        <div class="col-md-6 col-md-offset-3">World's first tech restaurant with most avant-garde technologies in ordering system, automated dish delivery pipes, wearables showcase corner, man-made indoor tornados and rainforest and more.
+        </div><a class="btn btn-primary btn-lg col-md-2 col-md-offset-5" role="button">Learn more &raquo;</a>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <!-- row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>iTable</h2>
+          <p>Diners get to control every step of their meal, using the interactive touch-screen table. When you’re ready to order, photos of the dishes on the menu get projected onto the screen, and once you’ve placed your food and drink order you can play a game or even watch the chef prepare your meal via webcam. When it’s time to head home, patrons can pay through the table and can even order a taxi to drive them home.</p>
+          <p><a class="btn btn-success col-md-4 col-md-offset-4" href="#" id="reserve" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>iTornado</h2>
+          <p>Diners interact with a variety of natural phenomenon. Diners also learn about convergence, rotation and a variety of scientific facts.</p>
+          <p><a class="btn btn-primary col-md-4 col-md-offset-4" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>iCorner</h2>
+          <p> A magic corner that showcases a variety of latest Wearable products for customers to play around and keep up to date with the best tech scenes. </p>
+          <p><a class="btn btn-success col-md-4 col-md-offset-4" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+    </div> <!-- /container -->
+
+<script src="js/hisrc.js"></script>
+<script>
+	$.hisrc.speedTest();
+	$(document).ready(function(){
+		$(".hisrc img").hisrc();
+	});
+</script>
+<script>window.jQuery || document.write('<script src="http://code.jquery.com/jquery-latest.min.js"><\/script>')</script>
+<script>
+    $('#link').click(function () {
+        var src = 'http://www.youtube.com/v/FSi2fJALDyQ&amp&showinfo=0&html5=1;autoplay=1';
+        $('#myModal').modal('show');
+        $('#myModal iframe').attr('src', src);
+    });
+
+    $('#myModal button').click(function () {
+        $('#myModal iframe').removeAttr('src');
+    });
+</script>
+
+<a tabindex="0" class="btn btn-lg navbar-btn btn-info login-popover col-md-4 col-md-offset-4" id="menubutton" style="cursor:pointer;margin-top:7px" data-toggle="popover" data-trigger="focus" data-title="Say hi @ 857 919 9701" data-html="true" data-content="Or make a reservation online!"> Reserve Now  <span class="caret"></span></a>
+
+<div class="container-fluid" style="width:100%;">
+  <div id="menu">
+    <h2><span class="glyphicon glyphicon-tint"></span>  Best Ingredients Only</h2>
+
+</div>
+</div>
+<script>
+$('.login-popover').popover({
+    placement: 'down',
+    title: 'Say hi @ 857 919 9701',
+    content: 'Or make a reservation online!',
+    trigger: 'focus'
+});
+</script>
+
+<footer class="col-md-6 col-md-offset-5">
+        <p>&copy; William Joy 2014</p>
+</footer>
+
+</body>
+</html>
