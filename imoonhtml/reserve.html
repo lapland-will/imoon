@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+    <title>iMoon Reservation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+<h2> Reserve your spot in 10 seconds. </h2>
+<img style="margin:auto;vertical-align:middle" src="http://lowres.jantoo.com/restaurants-eating-eats_out-meal-chef-eat-29600864_low.jpg">
+
+
+    <div class="container">
+      <header class="row">
+        <div class="col-sm-12">
+            <h1>A Fine Day For A Form</h1>
+        </div>
+      </header>
+      <form>
+        <div class="row">
+        	<div class="col-sm-6 form-group name-group">
+      		    <label for="name" class="control-label">Your name: <span class="glyphicon glyphicon-star"></span></label>
+      		    <input type="text" id="name" class="form-control">
+              <span class="help-block"></span>
+        	</div>
+        	<div class="col-sm-6 form-group">
+  	           <label for="email" class="control-label">Your email:</label>
+  	           <input type="text" id="email" class="form-control">
+        	</div>
+        </div>
+         <div class="row">
+            <div class="col-sm-12 form-group">
+      		<fieldset>
+	      		<legend class="control-label">Favorite flavor of ice cream:</legend>
+                        <div class="radio">
+	      		   <label for="chocolate">
+	      			<input type="radio" name="flavor" value="chocolate" id="chocolate" checked> Chocolate
+	      		   </label>
+                        </div>
+                        <div class="radio">
+	      		   <label for="vanilla">
+	      			<input type="radio" name="flavor" value="vanilla" id="vanilla"> Vanilla
+	      		   </label>
+                        </div>
+                        <div class="radio">
+	      		   <label for="mintchoc">
+	      			<input type="radio" name="flavor" value="mintchoc" id="mintchoc"> Mint Chocolate Chip
+	      		   </label>
+                        </div>
+                        <div class="radio">
+	      		   <label for="moosetracks">
+	      			<input type="radio" name="flavor" value="moosetracks" id="moosetracks"> Moose Tracks
+	      		   </label>
+                        </div>
+      		</fieldset>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-12 form-group search-group">
+      		<label for="searchengine" class="control-label">Favorite search engine:</label>
+      		<select id="searchengine" class="form-control">
+      			<option checked>Please select one:</option>
+      			<option value="google">Google</option>
+      			<option value="yahoo">Yahoo!</option>
+       			<option value="bing">Bing</option>
+      			<option value="other">Other</option>     			
+      		</select>
+          <span class="help-block"></span>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-12 form-group">
+      		<label for="comments" class="control-label">Your comments:</label>
+      		<textarea id="comments" class="form-control"></textarea>
+            </div>
+         </div>
+      	<button name="submit" type="submit" class="btn btn-danger btn-lg">Submit</button>
+      </form>
+   </div>
+
+      <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/app.js"></script>
+
+
+</body>
+
+</html>

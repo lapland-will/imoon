@@ -8,13 +8,13 @@
 $(document).ready(function(){
   resizeDiv();
   $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-      disableOn: 0,
-      type: 'iframe',
-      mainClass: 'mfp-fade',
-      removalDelay: 160,
-      preloader: false,
-      fixedContentPos: false,
-      closeMarkup: '<button title="%title%" style="color:white;position:fixed;top:%; left:-2%" class="mfp-close">x</button>'
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
   });
   $('#size').popover({
       html : true,
@@ -43,9 +43,9 @@ $(document).ready(function(){
     $("#menu6 > li > a.expanded").not(this).toggleClass("expanded").toggleClass("collapsed").parent().find('> ul').slideToggle("medium");
     $(this).toggleClass("expanded").toggleClass("collapsed").parent().find('> ul').slideToggle("medium");
   });
+
   Parse.initialize("49EcldRwGfK0sFHeYDPXGAa18v3Ly3cnTzoPLw7b", "KOUwQCQZZ4O7tjkgjPWLtunOSSTtbIkxUjRctFbZ");
   $('#gesture-video').css("position","absolute");
-  $('#gesture-video').css("top",$('#1').offset().top); 
     $('.open-popup-link').magnificPopup({
   type:'inline',
   midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
@@ -93,11 +93,6 @@ $(document).ready(function(){
           title:'please select a valid quantity'
         });
 
-        $('#gestvid').get(0).oncanplay = function(){
-  $('#gestvid').get(0).currentTime = 4;
-  $('#gestvid').get(0).pause();
-  $('#gestvid').get(0).oncanplay = null;
-};
 
   $("#untouchable").swipe({
   swipeLeft:function(event, direction, distance, duration, fingerCount) {
@@ -126,7 +121,111 @@ $(document).ready(function(){
   }, 
   excludedElements:"button, a, input, textarea"
 });
-});
+
+$('#jumbotron-btn').click(function(){
+      $('#jumbotron-img1').removeClass('img-rounded').addClass('img-circle');
+      $('#jumbotron-img1').replaceWith('<img data-other-src="img/chef7.jpg" src="img/chef4.png" alt="Check out our imoon chef!" class="img-rounded img-responsive" style="width:480px;float:left" id="jumbotron-img1">');
+      $('#jumbotron-img2').replaceWith('<img data-other-src="img/chef8.jpg" src="img/chef3.jpg" alt="Check out our imoon chef!" class="img-rounded img-responsive" style="width:480px;float:right" id="jumbotron-img1">')
+      $('#jumbotron-img2').removeClass('img-rounded').addClass('img-circle');
+      $('.jumbotron h1').text('Chef Chris & Jackson');
+      $('.jumbotron h3').replaceWith('<h3 style="clear:both;padding-top:5%;padding-bottom:3%">Congratulations! You are entitled to a special 30% off discount code: IMOON2015</h3>');
+      $('#jumbotron-btn').replaceWith('<p><span class="label label-success col-md-offset-4">Simply Check out with it with 30% on us.</span></p>');
+    }); //end jumbotron click
+
+$('img').bind('mouseenter mouseleave', function() {
+    $(this).attr({
+        src: $(this).attr('data-other-src') 
+        , 'data-other-src': $(this).attr('src') 
+    })
+}); // image change on hover
+
+  $('#food1-btn').hover(function(){
+    console.log('The food1 button was hovered over!');
+    $('#food1-btn').css({ 
+      backgroundColor: 'chocolate'
+    });// end css
+  }, function(){
+    console.log('The food1 button was left behind!');
+    $('#food1-btn').css({ 
+      backgroundColor: 'green',
+      color: 'white'
+    });// end css
+  }); //end button1 hover
+
+    $('#food2-btn').hover(function(){
+    console.log('The food2 button was hovered over!');
+    $('#food2-btn').css({ 
+      backgroundColor: 'chocolate'
+    });// end css
+  }, function(){
+    console.log('The food2 button was left behind!');
+    $('#food2-btn').css({ 
+      backgroundColor: 'blue',
+      color: 'white'
+    });// end css
+  }); //end button2 hover
+
+      $('#food3-btn').hover(function(){
+    console.log('The food3 button was hovered over!');
+    $('#food3-btn').css({ 
+      backgroundColor: 'chocolate'
+    });// end css
+  }, function(){
+    console.log('The food3 button was left behind!');
+    $('#food3-btn').css({ 
+      backgroundColor: 'black',
+      color: 'white'
+    });// end css
+  }); //end button3 hover
+
+   $('#food4-btn').click(function(){
+      $('#dishes').animate({
+        opacity: '0.25',
+        height: 'toggle'
+      }, 1000, 'swing', function(){
+        $('#dishes').css({
+          opacity: '1'
+        }); //end cherry img css
+        $('#food4-btn').css({
+          backgroundColor: 'green',
+          color: 'white'
+        }); //end cherry button css
+      }); //end cherry animate
+    }); //end cherry click
+
+
+
+
+
+  $('#food-img4').hover(function(){
+    $('#food-img4').attr({
+      'src' : 'img/food5.jpg',
+      'class' : 'img-responsive img-circle'
+    }); //end attr
+  }, // end mouse over
+  function(){
+      $('#food-img4').attr({
+        'src' : 'img/food4.jpg',
+        'class' : 'img-responsive'
+      }); //end attr
+  }); //end apple img hover
+
+  $('#food1-btn').click(function(){
+    console.log('The food1-btn button was clicked!');
+    alert('We serve unlimited grilled chicken fingers on Monday Wednesday Friday!');
+  }); //end button1 click
+
+  $('#food2-btn').click(function(){
+    console.log('The food2-btn button was clicked!');
+    alert('We serve unlimited fried pickles on Tuesday Thursday!');
+  }); //end button2 click
+
+  $('#food3-btn').click(function(){
+    console.log('The food3-btn button was clicked!');
+    alert('We serve unlimited house-made dumplings on Weekends!');
+  }); //end button3 click
+
+}); // end ready
 
 $(window).on("orientationchange",function(){
   resizeDiv();
@@ -188,17 +287,14 @@ function resizeDiv() {
 
 
 
-/*
- *
- *
- * functions to update video position based on scroll
- */
+
+
+ // functions to update video position based on scroll
+ 
 $(window).scroll(function(e)
 {
    vpw = $(window).width();
-  gvw = $('#gestvid').width();
-  left = (vpw/2) - (gvw/2);
-  $('#gestvid').css("left",left+ "px");
+ 
   if(($(document).scrollTop()) > $(window).height())
   {
     $("#navbar").css("position","fixed");
@@ -211,244 +307,26 @@ $(window).scroll(function(e)
   }
  if(  ($(document).scrollTop() >= $('#1').offset().top-20)  &&  ($(document).scrollTop() < $('#7').offset().top ))
   {
-    $('#gesture-video').css("position","fixed");
-    $('#gesture-video').css("top","0");
     $('#scroll-icons').css("display","initial");
   }
   else if($(document).scrollTop() <= $('#1').offset().top-20)
   {
-    $('#gestvid').get(0).currentTime = 4;
-    $('#gestvid').get(0).pause();
     clearInterval(videoTimerID);
     animating = 0;
     $("#designed-to-go-text-holder").removeClass("out");
     $('#designed-to-go-text-holder').css("position","absolute");
     $('#designed-to-go-text-holder').css("top","55%");
-    $('#gesture-video').css("position","absolute");
-    $('#gesture-video').css("top",$('#1').offset().top);
     $('#scroll-icons').css("display","none");
   }
 
   else if($(document).scrollTop() >= $('#7').offset().top)
   {
-    $('#gesture-video').css("position","absolute");
-    $('#gesture-video').css("top",$('#7').offset().top);
     $('#scroll-icons').css("display","none");
   }
   scrollstopper();
 });
 
 
-/*
- *  Animation Functions
- */
-
- function doAnimation(anim, time, circle, animationPointer)
- {
-   if(animating != anim)
-   {
-    $("#designed-to-go-text-holder").removeClass("out");
-    $("#type-image").css("display","initial");
-    $("#type-image-keyboard").css("display","none");
-    $("#type-image-search-keyboard").css("display","none");
-    $("#nest-image-65").css("display","initial");
-    $("#nest-image-66").css("display","none");
-    $("#nest-image-67").css("display","none");
-    $("#nest-image-68").css("display","none");
-    $("#nest-image-69").css("display","none");
-    $("#nest-image-70").css("display","none");
-    $("#nest-image-71").css("display","none");
-    $("#nest-image-72").css("display","none");
-    $("#nest-image-73").css("display","none");
-    $("#nest-image-74").css("display","none");
-    $("#nest-image-75").css("display","none");
-    $("#music-image").css("display","initial");
-    $("#music-image-play").css("display","none");
-    $("#music-image-arrow").css("display","none");
-    $("#music-image-low").css("display","none");
-    $("#music-image-vol").css("display","none");
-    once = 0;
-    clearInterval(videoTimerID);
-    video.pause();
-    video.pauser = anim;
-    animating = anim;
-    video.currentTime = time;
-    selectCircle(circle);
-    video.play();
-    videoTimerID = window.setInterval(animationPointer, 1);
-    }
- }
-
-var once = 0;
-function animateSwipe()
-{
-     var pos = $('#designed-to-go-text-holder').offset().top-$(document).scrollTop();
-    $('#designed-to-go-text-holder').css("position","fixed");
-    $('#designed-to-go-text-holder').css("top",pos);
-  if(video.currentTime >= 10)
-  {
-    if(once == 0)
-    {
-      $('#designed-to-go-text-holder').addClass("out");
-      once = 1;
-    }
-  }
-  if(video.currentTime >= 12)
-  {
-    video.pause();
-    video.pauser = "intro finish";
-    clearInterval(videoTimerID);
-  }
-}
-
-
-function animateType()
-{
-  if((video.currentTime > 15) && (video.currentTime < 16))
-  {
-    $("#type-image").css("display","none");
-    $("#type-image-keyboard").css("display","initial");
-    $("#type-image-search-keyboard").css("display","none");
-  }
-  if(video.currentTime >= 22)
-  {
-    video.pause();
-    video.pauser = "type finish";
-    $("#type-image-keyboard").css("display","none");
-    $("#type-image-search-keyboard").css("display","initial");
-    clearInterval(videoTimerID);
-  }
-}
-
-function animateNest()
-{
-  if((video.currentTime > 24.8) && (video.currentTime <25))
-  {
-    $("#nest-image-65").css("display","none");
-    $("#nest-image-66").css("display","initial");
-  }
-  if((video.currentTime > 25) && (video.currentTime <25.2))
-  {
-    $("#nest-image-66").css("display","none");
-    $("#nest-image-67").css("display","initial");
-  }
-  if((video.currentTime > 25.2) && (video.currentTime <25.4))
-  {
-    $("#nest-image-67").css("display","none");
-    $("#nest-image-68").css("display","initial");
-  }
-  if((video.currentTime > 25.4) && (video.currentTime <25.6))
-  {
-    $("#nest-image-68").css("display","none");
-    $("#nest-image-69").css("display","initial");
-  }
-  if((video.currentTime > 25.6) && (video.currentTime <25.8))
-  {
-    $("#nest-image-69").css("display","none");
-    $("#nest-image-70").css("display","initial");
-  }
-  if((video.currentTime > 25.8) && (video.currentTime <26))
-  {
-    $("#nest-image-70").css("display","none");
-    $("#nest-image-71").css("display","initial");
-  }
-  if((video.currentTime > 26) && (video.currentTime <26.2))
-  {
-    $("#nest-image-71").css("display","none");
-    $("#nest-image-72").css("display","initial");
-  }
-  if((video.currentTime > 26.2) && (video.currentTime <26.4))
-  {
-    $("#nest-image-72").css("display","none");
-    $("#nest-image-73").css("display","initial");
-  }
-  if((video.currentTime > 26.4) && (video.currentTime <26.6))
-  {
-    $("#nest-image-73").css("display","none");
-    $("#nest-image-74").css("display","initial");
-  }
-  if((video.currentTime > 26.6) && (video.currentTime <27))
-  {
-    $("#nest-image-74").css("display","none");
-    $("#nest-image-75").css("display","initial");
-  }
-  if(video.currentTime >= 30)
-  {
-    $("#gesture-video").css("opacity",.99);
-    video.pause();
-
-    video.pauser = "nest finish";
-    clearInterval(videoTimerID);
-  }
-}
-
-function animateMusic()
-{
-  if((video.currentTime > 32) && (video.currentTime <33))
-  {
-    $("#music-image").css("display","none");
-    $("#music-image-play").css("display","initial");
-  }
-  if((video.currentTime > 34.3) && (video.currentTime <35))
-  {
-    $("#music-image-play").css("display","none");
-    $("#music-image-arrow").css("display","initial");
-  }
-  if((video.currentTime > 35.4) && (video.currentTime <36))
-  {
-
-    $("#music-image-arrow").css("display","none");
-    $("#music-image-low").css("display","initial");
-  }
-  if((video.currentTime > 35.9) && (video.currentTime <36))
-  {
-
-    $("#music-image-low").css("display","none");
-    $("#music-image-vol").css("display","initial");
-  }
-  if((video.currentTime > 38.6) && (video.currentTime <40))
-  {
-    $("#music-image-vol").css("display","none");
-    $("#music-image").css("display","initial");
-  }
-  if(video.currentTime >= 40)
-  {
-    video.pause();
-
-    video.pauser = "music finish";
-    clearInterval(videoTimerID);
-  }
-}
-
-function animateLights()
-{
-  if(video.currentTime >= 48)
-  {
-    video.pause();
-    video.pauser = "lights finish";
-    clearInterval(videoTimerID);
-  }
-}
-
-function animateGame()
-{
-  if(video.currentTime >= 55)
-  {
-    video.pause();
-    video.pauser = "game finish";
-    clearInterval(videoTimerID);
-  }
-}
-
-function recenter()
-{
-  if(video.currentTime >= 58)
-  {
-    video.pause();
-    video.pauser = "recenter finish";
-    clearInterval(videoTimerID);
-  }
-}
 /*
  *  Navigation through animations (circles)
  */
@@ -976,4 +854,3 @@ function stripeResponseHandler(status, response)
         });
     }
 }
-

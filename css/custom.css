@@ -93,6 +93,7 @@ h3 {
 	background-color: transparent;
 	color: white;
 	border-radius: 0;
+  width:200px;
 }
 
 #navbar {
@@ -453,4 +454,5 @@ footer {
 iframe:focus { 
     outline: none;
 }
+
 

@@ -6261,6 +6261,7 @@ h3 {
   background-color: transparent;
   color: white;
   border-radius: 0;
+  width:160px;
 }
 #navbar {
   overflow: visible;

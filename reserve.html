@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+    <title>iMoon Reservation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+<h2 style="margin-bottom:27%;margin-top:22%"> Reserve your Sweet spot in 10 seconds. </h2>
+
+    <div class="container">
+      <form>
+        <div class="row">
+        	<div class="col-sm-6 form-group name-group">
+      		    <label for="name" class="control-label">Your name<span class="glyphicon glyphicon-star"></span></label>
+      		    <input type="text" id="name" class="form-control">
+              <span class="help-block"></span>
+        	</div>
+        	<div class="col-sm-6 form-group">
+  	           <label for="email" class="control-label">Your email</label>
+  	           <input type="text" id="email" class="form-control">
+        	</div>
+        </div>
+         <div class="row">
+            <div class="col-sm-12 form-group">
+      		<fieldset>
+	      		<legend class="control-label">We give you an ice cream for free (No Kidding!)</legend>
+                        <div class="radio">
+	      		   <label for="chocolate">
+	      			<input type="radio" name="flavor" value="chocolate" id="chocolate" checked> Chocolate Moose
+	      		   </label>
+                        </div>
+                        <div class="radio">
+	      		   <label for="vanilla">
+	      			<input type="radio" name="flavor" value="vanilla" id="vanilla"> Strawberry storm
+	      		   </label>
+                        </div>
+                        <div class="radio">
+	      		   <label for="mintchoc">
+	      			<input type="radio" name="flavor" value="mintchoc" id="mintchoc"> Mint Chocolate Chip
+	      		   </label>
+                        </div>
+                        <div class="radio">
+	      		   <label for="moosetracks">
+	      			<input type="radio" name="flavor" value="moosetracks" id="moosetracks"> Blueberry Luxury
+	      		   </label>
+                        </div>
+      		</fieldset>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-12 form-group seat-group">
+      		<label for="seat" class="control-label">Seat Preference</label>
+      		<select id="seat" class="form-control">
+      			<option checked>Please select one</option>
+      			<option value="window">Near awewsome window</option>
+      			<option value="corner">Corners with candle light</option>
+       			<option value="center">Center big tables</option>
+      			<option value="other">I'm special. I take what normal people don't take.</option>     			
+      		</select>
+          <span class="help-block"></span>
+            </div>
+
+          <div class="col-sm-12 form-group time-group">
+          <label for="time" class="control-label">Time</label>
+          <select id="time" class="form-control">
+            <option checked>Please select one</option>
+            <option value="500">5:00pm</option>
+            <option value="530">5:30pm</option>
+            <option value="600">6:00pm</option>
+            <option value="630">6:30pm</option>
+            <option value="700">7:00pm</option>
+            <option value="730">7:30pm</option>
+            <option value="800">8:00pm</option>
+            <option value="830">8:30pm</option>
+            <option value="900">9:00pm</option> 
+            <option value="930">9:30pm</option> 
+            <option value="1000">10:00pm</option> 
+            <option value="1030">10:30pm</option> 
+            <option value="1100">11:00pm</option>          
+          </select>
+          <span class="help-block"></span>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-12 form-group">
+      		<label for="comments" class="control-label">Anything you want us to know?</label>
+      		<textarea id="comments" class="form-control"></textarea>
+            </div>
+         </div><br><br>
+      	<button name="submit" type="submit" class="btn btn-success btn-lg col-sm-6 col-md-offset-3">Submit</button>
+      </form>
+   </div><br><br>
+
+   <div style="text-align:center"><img src="http://lowres.jantoo.com/restaurants-eating-eats_out-meal-chef-eat-29600864_low.jpg"></div>
+
+      <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/app.js"></script>
+<script>
+$(document).ready(function(){ 
+      $ ('div:even').css({
+        backgroundColor: "#E8E8E8"
+      });
+}); // end ready
+</script>
+
+</body>
+
+</html>
